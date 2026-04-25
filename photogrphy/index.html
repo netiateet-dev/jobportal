@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1><i class="fas fa-camera-retro"></i> My Photo Gallery</h1>
+        <p class="intro">Photography is the art of capturing light, moments, and memories. Every photo tells a story—of
+            nature, people, or the world around us. Explore and add your own favorite shots!</p>
+    </header>
+
+    <div class="gallery-container">
+
+        <aside class="filter-sidebar">
+            <div class="filter-header">
+                <h3><i class="fas fa-filter"></i> Filter Categories</h3>
+            </div>
+            <div class="filter-section">
+                <h4><i class="fas fa-tags"></i> Categories</h4>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" value="wedding" class="category-filter">
+                        <span class="checkmark"></span>
+                        <span class="filter-label">Wedding</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="engagement" class="category-filter">
+                        <span class="checkmark"></span>
+                        <span class="filter-label">Engagement</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="general" class="category-filter">
+                        <span class="checkmark"></span>
+                        <span class="filter-label">General</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="nature" class="category-filter">
+                        <span class="checkmark"></span>
+                        <span class="filter-label">Nature</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-toggle">
+                <button id="toggleSidebar" class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </aside>
+
+
+        <main class="gallery-main">
+            <div class="gallery-header">
+                <div class="results-info">
+                    <span id="resultsCount">Showing all 9 images</span>
+                </div>
+                <div class="view-options">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="images" class="gallery-grid">
+                <div class="gallery-card" data-category="nature landscape" data-color="green blue">
+                    <button class="delete-btn" title="Delete"><i class="fas fa-trash"></i></button>
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                        alt="Emerald Lake, Canada"
+                        data-desc="A stunning view of Emerald Lake surrounded by pine trees and mountains in Canada.">
+                    <div class="caption-overlay">
+                        <h3>Emerald Lake, Canada</h3>
+                        <p>A stunning view of Emerald Lake surrounded by pine trees and mountains in Canada.</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="nature" data-color="green">
+                    <button class="delete-btn" title="Delete"><i class="fas fa-trash"></i></button>
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80"
+                        alt="Misty Forest"
+                        data-desc="A misty forest with tall, dense trees and a mysterious atmosphere.">
+                    <div class="caption-overlay">
+                        <h3>Misty Forest</h3>
+                        <p>A misty forest with tall, dense trees and a mysterious atmosphere.</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="nature seasons" data-color="orange purple">
+                    <button class="delete-btn" title="Delete"><i class="fas fa-trash"></i></button>
+                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80"
+                        alt="Wildflowers in Bloom"
+                        data-desc="A vibrant field of wildflowers in full bloom under the sunlight.">
+                    <div class="caption-overlay">
+                        <h3>Wildflowers in Bloom</h3>
+                        <p>A vibrant field of wildflowers in full bloom under the sunlight.</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="wildlife" data-color="green">
+                    <button class="delete-btn" title="Delete"><i class="fas fa-trash"></i></button>
+                    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80"
+                        alt="Running Horses" data-desc="A group of wild horses running freely across a grassy plain.">
+                    <div class="caption-overlay">
+                        <h3>Running Horses</h3>
+                        <p>A group of wild horses running freely across a grassy plain.</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="landscape" data-color="blue">
+                    <button class="delete-btn" title="Delete"><i class="fas fa-trash"></i></button>
+                    <img src="https://plus.unsplash.com/premium_photo-1675621475704-0df9d884f637?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Mountain Peaks" data-desc="Snow-capped mountain peaks under a dramatic sky.">
+                    <div class="caption-overlay">
+                        <h3>Mountain Peaks</h3>
+                        <p>Snow-capped mountain peaks under a dramatic sky.</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="seasons" data-color="orange">
+                    <button class="delete-btn" title="Delete"><i class="fas fa-trash"></i></button>
+                    <img src="https://images.unsplash.com/photo-1541904563-3f8349cb5de1?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Autumn Road"
+                        data-desc="A winding road covered with autumn leaves and surrounded by colorful trees.">
+                    <div class="caption-overlay">
+                        <h3>Autumn Road</h3>
+                        <p>A winding road covered with autumn leaves and surrounded by colorful trees.</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="nature" data-color="green">
+                    <button class="delete-btn" title="Delete"><i class="fas fa-trash"></i></button>
+                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80"
+                        alt="Wildflowers in Bloom"
+                        data-desc="A vibrant field of wildflowers in full bloom under the sunlight.">
+                    <div class="caption-overlay">
+                        <h3>Wildflowers in Bloom</h3>
+                        <p>A vibrant field of wildflowers in full bloom under the sunlight.</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="landscape" data-color="blue">
+                    <button class="delete-btn" title="Delete"><i class="fas fa-trash"></i></button>
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+                        alt="Ocean Waves" data-desc="Powerful ocean waves crashing onto the shore at sunset.">
+                    <div class="caption-overlay">
+                        <h3>Ocean Waves</h3>
+                        <p>Powerful ocean waves crashing onto the shore at sunset.</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="urban" data-color="orange">
+                    <button class="delete-btn" title="Delete"><i class="fas fa-trash"></i></button>
+                    <img src="https://images.unsplash.com/photo-1495519502930-fcfca9862eff?q=80&w=2144&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Sunset Over Hills"
+                        data-desc="A beautiful sunset casting golden light over rolling green hills.">
+                    <div class="caption-overlay">
+                        <h3>Sunset Over Hills</h3>
+                        <p>A beautiful sunset casting golden light over rolling green hills.</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="urban" data-color="orange">
+                    <button class="delete-btn" title="Delete"><i class="fas fa-trash"></i></button>
+                    <img src="https://images.unsplash.com/photo-1508008964339-7405e10c99ef?q=80&w=1984&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Urban Life" data-desc="A bustling urban street scene capturing the energy of city life.">
+                    <div class="caption-overlay">
+                        <h3>Urban Life</h3>
+                        <p>A bustling urban street scene capturing the energy of city life.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <section class="about-photography">
+        <h2>About Photography</h2>
+        <p>Photography is more than just taking pictures—it's about seeing the world in new ways, capturing fleeting
+            moments, and sharing stories without words. Whether you're a professional or just starting out, every photo
+            is a chance to express your creativity and perspective. Keep exploring, keep shooting, and let your images
+            speak for you!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Photo Gallery. Created by Arpit Patidar.</p>
+        <p>Contact: <a href="mailto:contact@myphotographyproject.test">contact@myphotographyproject.test</a></p>
+        <div class="footer-social">
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <a href="add-image.html" class="add-img-btn" title="Add Image">
+        <i class="fas fa-plus"></i>
+    </a>
+    <a href="book-appointment.html" class="book-appointment-btn" title="Book Appointment">
+        <i class="fas fa-calendar-check"></i>
+    </a>
+
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <h2><i class="fas fa-lock"></i> Confirm Delete</h2>
+            <p>Please enter the password to delete this image:</p>
+            <input type="password" id="deletePassword" placeholder="Password" autocomplete="off">
+            <div class="modal-actions">
+                <button id="deleteConfirm" class="btn">Delete</button>
+                <button id="deleteCancel" class="btn btn-cancel">Cancel</button>
+            </div>
+            <p id="deleteError" class="modal-error" style="display:none;">Incorrect password. Try again.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebar = document.querySelector('.filter-sidebar');
+            if (sidebar) {
+                sidebar.innerHTML = `
+      <div class="filter-header">
+        <h3><i class="fas fa-filter"></i> Filter Categories</h3>
+      </div>
+      <div class="filter-section">
+        <h4><i class="fas fa-tags"></i> Categories</h4>
+        <div class="filter-options">
+          <label class="filter-option">
+            <input type="checkbox" value="wedding" class="category-filter">
+            <span class="checkmark"></span>
+            <span class="filter-label">Wedding</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" value="engagement" class="category-filter">
+            <span class="checkmark"></span>
+            <span class="filter-label">Engagement</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" value="general" class="category-filter">
+            <span class="checkmark"></span>
+            <span class="filter-label">General</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" value="nature" class="category-filter">
+            <span class="checkmark"></span>
+            <span class="filter-label">Nature</span>
+          </label>
+        </div>
+      </div>
+      <div class="filter-toggle">
+        <button id="toggleSidebar" class="sidebar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    `;
+
+                document.getElementById('toggleSidebar').onclick = function () {
+                    sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none';
+                };
+            }
+        });
+    </script>
+</body>
+
+</html>

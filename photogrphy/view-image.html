@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Image</title>
+    <link rel="stylesheet" href="view-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Gallery</a>
+        <h1><i class="fas fa-camera-retro"></i> View Image</h1>
+    </header>
+    <main>
+        <div class="view-image-card" id="viewImageCard">
+            <h2 id="imgName"></h2>
+            <img id="imgMain" src="" alt="Selected Image">
+            <div class="caption-overlay">
+                <h3>Description</h3>
+                <p id="image-description" class="image-description"></p>
+            </div>
+        </div>
+    </main>
+    <script>
+    // Read image data from localStorage and display
+    const data = JSON.parse(localStorage.getItem('viewImage') || '{}');
+    if (data.url) {
+        document.getElementById('imgName').textContent = data.name || 'Image';
+        document.getElementById('imgMain').src = data.url;
+        document.getElementById('imgMain').alt = data.name || 'Selected Image';
+        document.getElementById('image-description').textContent = (data.desc && data.desc.trim()) ? data.desc : 'No description available.';
+    } else {
+        document.getElementById('viewImageCard').innerHTML = '<p>No image data found.</p>';
+    }
+    </script>
+</body>
+</html>

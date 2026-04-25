@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Photography Appointment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="booking-main">
+        <div class="booking-header">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Gallery
+            </a>
+            <h1><i class="fas fa-calendar-check"></i> Book Photography Appointment</h1>
+            <p>Capture your special moments with professional photography services</p>
+        </div>
+
+        <form id="bookingForm" class="booking-form">
+            <div class="form-section">
+                <h3><i class="fas fa-user"></i> Personal Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3><i class="fas fa-calendar-alt"></i> Event Details</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="eventType">Event Type *</label>
+                        <select id="eventType" name="eventType" required>
+                            <option value="">Select Event Type</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="engagement">Engagement</option>
+                            <option value="birthday">Birthday Party</option>
+                            <option value="anniversary">Anniversary</option>
+                            <option value="corporate">Corporate Event</option>
+                            <option value="graduation">Graduation</option>
+                            <option value="family">Family Portrait</option>
+                            <option value="maternity">Maternity Shoot</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDate">Event Date *</label>
+                        <input type="date" id="eventDate" name="eventDate" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="startTime">Start Time *</label>
+                        <input type="time" id="startTime" name="startTime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Duration (Hours) *</label>
+                        <select id="duration" name="duration" required>
+                            <option value="">Select Duration</option>
+                            <option value="2">2 Hours</option>
+                            <option value="4">4 Hours</option>
+                            <option value="6">6 Hours</option>
+                            <option value="8">8 Hours (Full Day)</option>
+                            <option value="12">12 Hours (Extended)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3><i class="fas fa-map-marker-alt"></i> Location Details</h3>
+                <div class="form-group">
+                    <label for="venueName">Venue Name</label>
+                    <input type="text" id="venueName" name="venueName" placeholder="e.g., Grand Hotel, Community Center">
+                </div>
+                <div class="form-group">
+                    <label for="address">Full Address *</label>
+                    <textarea id="address" name="address" rows="3" required placeholder="Enter complete address including city, state, and zip code"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City *</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State *</label>
+                        <input type="text" id="state" name="state" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3><i class="fas fa-camera"></i> Photography Services</h3>
+                <div class="form-group">
+                    <label>Services Required *</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="services" value="event-coverage">
+                            <span class="checkmark"></span>
+                            Event Coverage
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="services" value="portraits">
+                            <span class="checkmark"></span>
+                            Portrait Sessions
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="services" value="group-photos">
+                            <span class="checkmark"></span>
+                            Group Photos
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="services" value="candid-shots">
+                            <span class="checkmark"></span>
+                            Candid Shots
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="services" value="video">
+                            <span class="checkmark"></span>
+                            Video Recording
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="services" value="drone">
+                            <span class="checkmark"></span>
+                            Drone Photography
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="guestCount">Expected Guest Count</label>
+                    <input type="number" id="guestCount" name="guestCount" min="1" placeholder="Approximate number of guests">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3><i class="fas fa-comment"></i> Additional Information</h3>
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests or Requirements</label>
+                    <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any specific shots, themes, or special requirements you'd like to discuss"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="budget">Budget Range</label>
+                    <select id="budget" name="budget">
+                        <option value="">Select Budget Range</option>
+                        <option value="500-1000">500 - 1,000</option>
+                        <option value="1000-2000">1,000 - 2,000</option>
+                        <option value="2000-5000">2,000 - 5,000</option>
+                        <option value="5000+">5,000+</option>
+                        <option value="discuss">Let's Discuss</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3><i class="fas fa-clock"></i> Preferred Contact Time</h3>
+                <div class="form-group">
+                    <label>When would you prefer to be contacted? *</label>
+                    <div class="radio-group">
+                        <label class="radio-item">
+                            <input type="radio" name="contactTime" value="morning" required>
+                            <span class="radiomark"></span>
+                            Morning (9 AM - 12 PM)
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="contactTime" value="afternoon" required>
+                            <span class="radiomark"></span>
+                            Afternoon (12 PM - 5 PM)
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="contactTime" value="evening" required>
+                            <span class="radiomark"></span>
+                            Evening (5 PM - 8 PM)
+                        </label>
+                        <label class="radio-item">
+                            <input type="radio" name="contactTime" value="anytime" required>
+                            <span class="radiomark"></span>
+                            Anytime
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Submit Booking Request
+                </button>
+                <button type="reset" class="btn btn-secondary">
+                    <i class="fas fa-undo"></i> Reset Form
+                </button>
+            </div>
+        </form>
+
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <h2><i class="fas fa-check-circle"></i> Booking Submitted!</h2>
+                <p>Thank you for your booking request. We'll contact you within 24 hours to confirm your appointment and discuss the details.</p>
+                <div class="modal-actions">
+                    <button onclick="window.location.href='index.html'" class="btn">Back to Gallery</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="booking-script.js"></script>
+</body>
+</html>

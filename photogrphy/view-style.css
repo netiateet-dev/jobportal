@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    background: #f8f9fa;
+    color: #222;
+}
+header {
+    text-align: center;
+    padding: 2.5rem 0 1.2rem 0;
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    color: #fff;
+    border-bottom: none;
+}
+header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.3rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+}
+header .fa-camera-retro {
+    font-size: 2.1rem;
+    color: #fffbe7;
+}
+.back-link {
+    color: #fffbe7;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.back-link:hover {
+    color: #43cea2;
+}
+.view-image-card {
+    max-width: 600px;
+    margin: 2.5rem auto 0 auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.13);
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+.view-image-card h2 {
+    color: #185a9d;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+.view-image-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 1.5rem;
+}
+.caption-overlay {
+    position: static;
+    background: none;
+    color: #222;
+    padding: 0;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.caption-overlay h3 {
+    color: #185a9d;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+#descText {
+    color: #444;
+    font-size: 1.08rem;
+    background: #f8f9fa;
+    padding: 0.7em 1em;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+}
+.view-image-card a {
+    color: #007bff;
+    word-break: break-all;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+.view-image-card a:hover {
+    color: #185a9d;
+}
+@media (max-width: 700px) {
+    .view-image-card {
+        padding: 1rem 0.5rem;
+    }
+    .caption-overlay {
+        max-width: 100%;
+    }
+}
